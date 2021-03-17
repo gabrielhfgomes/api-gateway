@@ -6,7 +6,6 @@ import { tap } from 'rxjs/operators';
 export class LoggingInterceptor implements NestInterceptor {
 
     intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
-        console.log(`antes...`)
         const now = Date.now();
 
         return next.handle().pipe(tap(() => console.log(`Depois ${Date.now() - now} ms`)))
