@@ -32,5 +32,4 @@ export class CategoriasController {
           {id: _id, categoria: atualizarCategoriaDto}
         )
     }
-
 }
